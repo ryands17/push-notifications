@@ -1,9 +1,6 @@
 import firebase from 'firebase/app'
-import 'firebase/messaging'
+import { messaging } from './config/utils'
 
-firebase.initializeApp({
-  messagingSenderId: process.env.REACT_APP_MESSAGING_ID,
-})
 // This optional code is used to register a service worker.
 // register() is not called by default.
 
@@ -15,6 +12,12 @@ firebase.initializeApp({
 
 // To learn more about the benefits of this model and instructions on how to
 // opt-in, read https://bit.ly/CRA-PWA
+
+if (!firebase.apps.length) {
+  firebase.initializeApp({
+    messagingSenderId: process.env.REACT_APP_MESSAGING_ID,
+  })
+}
 
 const isLocalhost = Boolean(
   window.location.hostname === 'localhost' ||
@@ -33,6 +36,7 @@ type Config = {
 
 export function register(config?: Config) {
   if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+    // if ('serviceWorker' in navigator) {
     // The URL constructor is available in all browsers that support SW.
     const publicUrl = new URL(
       (process as { env: { [key: string]: string } }).env.PUBLIC_URL,
@@ -72,8 +76,6 @@ function registerValidSW(swUrl: string, config?: Config) {
   navigator.serviceWorker
     .register(swUrl)
     .then(async registration => {
-      let messaging = firebase.messaging()
-      await requestPermission(messaging)
       messaging.useServiceWorker(registration)
       messaging.onMessage(message => {
         if (!('Notification' in window)) {
@@ -121,16 +123,6 @@ function registerValidSW(swUrl: string, config?: Config) {
     .catch(error => {
       console.error('Error during service worker registration:', error)
     })
-}
-
-async function requestPermission(messaging: firebase.messaging.Messaging) {
-  try {
-    await messaging.requestPermission()
-    let token = messaging.getToken()
-    console.log({ token })
-  } catch (e) {
-    console.log('Unable to get permission to notify.')
-  }
 }
 
 function checkValidServiceWorker(swUrl: string, config?: Config) {
