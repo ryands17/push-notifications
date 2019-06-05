@@ -1,6 +1,7 @@
 {
   "name": "firebase-push",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "A simple implementation of FCM Push notifications",
   "private": true,
   "dependencies": {
     "@types/jest": "24.0.13",
@@ -13,6 +14,7 @@
     "typescript": "3.5.1"
   },
   "scripts": {
+    "postinstall": "typesync",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -23,14 +25,20 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      ">0.1%"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
+      "last 2 chrome versions",
+      "last 2 firefox versions",
       "last 1 safari version"
     ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "typesync": "^0.5.1"
   }
 }
