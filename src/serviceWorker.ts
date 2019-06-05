@@ -1,3 +1,9 @@
+import firebase from 'firebase/app'
+import 'firebase/messaging'
+
+firebase.initializeApp({
+  messagingSenderId: process.env.REACT_APP_MESSAGING_ID,
+})
 // This optional code is used to register a service worker.
 // register() is not called by default.
 
@@ -65,7 +71,18 @@ export function register(config?: Config) {
 function registerValidSW(swUrl: string, config?: Config) {
   navigator.serviceWorker
     .register(swUrl)
-    .then(registration => {
+    .then(async registration => {
+      let messaging = firebase.messaging()
+      await requestPermission(messaging)
+      messaging.useServiceWorker(registration)
+      messaging.onMessage(message => {
+        if (!('Notification' in window)) {
+          return
+        }
+        const { title, ...rest } = message.notification
+        registration.showNotification(title, { ...rest })
+      })
+
       registration.onupdatefound = () => {
         const installingWorker = registration.installing
         if (installingWorker == null) {
@@ -104,6 +121,16 @@ function registerValidSW(swUrl: string, config?: Config) {
     .catch(error => {
       console.error('Error during service worker registration:', error)
     })
+}
+
+async function requestPermission(messaging: firebase.messaging.Messaging) {
+  try {
+    await messaging.requestPermission()
+    let token = messaging.getToken()
+    console.log({ token })
+  } catch (e) {
+    console.log('Unable to get permission to notify.')
+  }
 }
 
 function checkValidServiceWorker(swUrl: string, config?: Config) {
