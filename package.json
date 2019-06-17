@@ -4,15 +4,15 @@
   "description": "A simple implementation of FCM Push notifications",
   "private": true,
   "dependencies": {
-    "@types/jest": "24.0.13",
-    "@types/node": "12.0.4",
-    "@types/react": "16.8.19",
+    "@types/jest": "24.0.15",
+    "@types/node": "12.0.8",
+    "@types/react": "16.8.20",
     "@types/react-dom": "16.8.4",
-    "firebase": "^6.1.0",
+    "firebase": "^6.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "typescript": "3.5.1"
+    "typescript": "3.5.2"
   },
   "scripts": {
     "postinstall": "typesync",
@@ -41,8 +41,8 @@
   },
   "devDependencies": {
     "@types/prettier": "^1.16.4",
-    "husky": ">=1",
-    "lint-staged": ">=8",
+    "husky": ">=2.4.1",
+    "lint-staged": ">=8.2.1",
     "prettier": "^1.17.1",
     "typesync": "^0.5.1"
   },
