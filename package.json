@@ -1,32 +1,35 @@
 {
   "name": "firebase-push",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A simple implementation of FCM Push notifications",
   "private": true,
   "dependencies": {
-    "@types/jest": "24.0.18",
-    "@types/node": "12.7.2",
-    "@types/react": "16.9.2",
-    "@types/react-dom": "16.9.0",
-    "firebase": "^6.4.1",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1",
-    "typescript": "3.5.3"
+    "@types/jest": "26.0.9",
+    "@types/node": "14.0.27",
+    "@types/react": "16.9.45",
+    "@types/react-dom": "16.9.8",
+    "firebase": "^7.17.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "typescript": "3.9.7"
   },
   "scripts": {
-    "postinstall": "typesync",
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "cross-env NODE_ENV=production node codemods/firebase-sw.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start": "npx serve -s build"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
   "browserslist": {
     "production": [
-      ">0.1%"
+      ">0.75%",
+      "not dead",
+      "not op_mini all"
     ],
     "development": [
       "last 2 chrome versions",
@@ -37,14 +40,16 @@
   "prettier": {
     "semi": false,
     "singleQuote": true,
-    "trailingComma": "es5"
+    "arrowParens": "avoid"
   },
   "devDependencies": {
-    "@types/prettier": "^1.18.2",
-    "husky": ">=3.0.4",
-    "lint-staged": ">=9.2.3",
-    "prettier": "^1.17.1",
-    "typesync": "^0.6.1"
+    "@types/prettier": "^2.0.2",
+    "cross-env": "^7.0.2",
+    "husky": ">=4.2.5",
+    "jscodeshift": "^0.10.0",
+    "lint-staged": ">=10.2.11",
+    "prettier": "^2.0.5",
+    "typesync": "^0.7.0"
   },
   "husky": {
     "hooks": {

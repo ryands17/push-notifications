@@ -5,13 +5,24 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
+import { isDev } from './config/utils'
 
 ReactDOM.render(<App />, document.getElementById('root'))
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.register({
   onSuccess: () => console.log('service worker registered!'),
-  onUpdate: () => {},
 })
+
+// register the firebase service worker
+if (!isDev && 'serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('/firebase-messaging-sw.js', {
+      scope: '/firebase-cloud-messaging-push-scope',
+    })
+    .then(registration => {
+      console.log('Registration successful, scope is:', registration.scope)
+    })
+    .catch(err => {
+      console.error('Service worker registration failed, error:', err)
+    })
+}

@@ -1,22 +1,11 @@
 import React, { useEffect } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import { messaging } from './config/utils'
-
-async function requestPermission(messaging: firebase.messaging.Messaging) {
-  try {
-    await messaging.requestPermission()
-    let token = await messaging.getToken()
-    console.log({ token })
-  } catch (e) {
-    console.log(e)
-    console.log('Unable to get permission to notify.')
-  }
-}
+import { requestPermission, isDev } from './config/utils'
 
 const App: React.FC = () => {
   useEffect(() => {
-    requestPermission(messaging)
+    !isDev && requestPermission()
   }, [])
 
   return (

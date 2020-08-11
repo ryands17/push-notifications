@@ -1,6 +1,8 @@
 import firebase from 'firebase/app'
 import 'firebase/messaging'
 
+export const isDev = process.env.NODE_ENV === 'development'
+
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -15,4 +17,15 @@ if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig)
 }
 
-export const messaging = firebase.messaging()
+const messaging = firebase.messaging()
+
+export const requestPermission = async () => {
+  try {
+    await messaging.requestPermission()
+    let token = await messaging.getToken()
+    console.log({ token })
+  } catch (e) {
+    console.log(e)
+    console.log('Unable to get permission to notify.')
+  }
+}
