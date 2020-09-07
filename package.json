@@ -46,7 +46,7 @@
     "@types/prettier": "^2.0.2",
     "cross-env": "^7.0.2",
     "husky": ">=4.2.5",
-    "jscodeshift": "^0.10.0",
+    "jscodeshift": "^0.11.0",
     "lint-staged": ">=10.2.11",
     "prettier": "^2.0.5",
     "typesync": "^0.7.0"
