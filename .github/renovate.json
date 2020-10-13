@@ -1,0 +1,16 @@
+{
+  "extends": ["config:base"],
+  "masterIssue": true,
+  "automerge": true,
+  "schedule": ["every weekend"],
+  "packageRules": [
+    {
+      "packagePatterns": ["react", "react-dom", "react-scripts"],
+      "groupName": "react"
+    },
+    {
+      "packagePatterns": ["^@types/"],
+      "groupName": "ts-types"
+    }
+  ]
+}
