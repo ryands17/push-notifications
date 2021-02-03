@@ -5,6 +5,10 @@
   "schedule": ["every weekend"],
   "packageRules": [
     {
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
       "packagePatterns": ["react", "react-dom", "react-scripts"],
       "groupName": "react"
     },
