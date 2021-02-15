@@ -20,7 +20,8 @@
     "postbuild": "cross-env NODE_ENV=production node codemods/firebase-sw.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "npx serve -s build"
+    "start": "npx serve -s build",
+    "postinstall": "husky install"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -45,16 +46,11 @@
   "devDependencies": {
     "@types/prettier": "2.2.1",
     "cross-env": "7.0.3",
-    "husky": "5.0.9",
+    "husky": "5",
     "jscodeshift": "0.11.0",
     "lint-staged": "10.5.4",
     "prettier": "2.2.1",
     "typesync": "0.8.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{js,css,json,md}": [

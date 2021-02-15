@@ -1,20 +1,30 @@
 {
   "extends": ["config:base"],
   "masterIssue": true,
-  "automerge": true,
   "schedule": ["every weekend"],
   "packageRules": [
     {
-      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest"],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch",
+        "pin",
+        "digest",
+        "lockFileMaintenance",
+        "rollback",
+        "bump"
+      ],
       "automerge": true
     },
     {
       "packagePatterns": ["react", "react-dom", "react-scripts"],
-      "groupName": "react"
+      "groupName": "react",
+      "automerge": true
     },
     {
       "packagePatterns": ["^@types/"],
-      "groupName": "ts-types"
+      "groupName": "ts-types",
+      "automerge": true
     }
   ]
 }
