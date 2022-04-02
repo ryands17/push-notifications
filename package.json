@@ -49,7 +49,7 @@
     "husky": "7.0.4",
     "jscodeshift": "0.13.1",
     "lint-staged": "12.3.7",
-    "prettier": "2.6.1",
+    "prettier": "2.6.2",
     "typesync": "0.9.0"
   },
   "lint-staged": {
