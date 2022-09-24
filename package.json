@@ -44,7 +44,7 @@
     "arrowParens": "avoid"
   },
   "devDependencies": {
-    "@types/prettier": "2.7.0",
+    "@types/prettier": "2.7.1",
     "cross-env": "7.0.3",
     "husky": "8.0.1",
     "jscodeshift": "0.13.1",
