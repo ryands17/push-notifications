@@ -50,7 +50,7 @@
     "jscodeshift": "0.14.0",
     "lint-staged": "13.1.0",
     "prettier": "2.8.3",
-    "typesync": "0.9.2"
+    "typesync": "0.10.0"
   },
   "lint-staged": {
     "*.{js,css,json,md}": [
