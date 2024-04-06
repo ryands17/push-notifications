@@ -3576,10 +3576,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.11.8.tgz#fe2012f2355e4ce08bca44aeb3abbb21cf88d33f"
   integrity sha512-KPcKqKm5UKDkaYPTuXSx8wEP7vE9GnuaXIZKijwRYcePpZFDVuy2a57LarFKiORbHOuTOOwYzxVxcUzsh2P2Pw==
 
-"@types/node@20.12.2":
-  version "20.12.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.12.2.tgz#9facdd11102f38b21b4ebedd9d7999663343d72e"
-  integrity sha512-zQ0NYO87hyN6Xrclcqp7f8ZbXNbRfoGWNcMvHTPQp9UUrwI0mI7XBz+cu7/W6/VClYo2g63B0cjull/srU7LgQ==
+"@types/node@20.12.5":
+  version "20.12.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.12.5.tgz#74c4f31ab17955d0b5808cdc8fd2839526ad00b3"
+  integrity sha512-BD+BjQ9LS/D8ST9p5uqBxghlN+S42iuNxjsUGjeZobe/ciXzk2qb1B6IXc6AnRLS+yFJRpN2IPEHMzwspfDJNw==
   dependencies:
     undici-types "~5.26.4"
 
@@ -3630,10 +3630,10 @@
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.4.tgz#cd667bcfdd025213aafb7ca5915a932590acdcdc"
   integrity sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==
 
-"@types/react-dom@18.2.23":
-  version "18.2.23"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.23.tgz#112338760f622a16d64271b408355f2f27f6302c"
-  integrity sha512-ZQ71wgGOTmDYpnav2knkjr3qXdAFu0vsk8Ci5w3pGAIdj7/kKAyn+VsQDhXsmzzzepAiI9leWMmubXz690AI/A==
+"@types/react-dom@18.2.24":
+  version "18.2.24"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.24.tgz#8dda8f449ae436a7a6e91efed8035d4ab03ff759"
+  integrity sha512-cN6upcKd8zkGy4HU9F1+/s98Hrp6D4MOcippK4PoE8OZRngohHZpbJn1GsaDLz87MqvHNoT13nHvNqM9ocRHZg==
   dependencies:
     "@types/react" "*"
 
@@ -3646,10 +3646,10 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/react@18.2.73":
-  version "18.2.73"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.73.tgz#0579548ad122660d99e00499d22e33b81e73ed94"
-  integrity sha512-XcGdod0Jjv84HOC7N5ziY3x+qL0AfmubvKOZ9hJjJ2yd5EE+KYjWhdOjt387e9HPheHkdggF9atTifMRtyAaRA==
+"@types/react@18.2.74":
+  version "18.2.74"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.74.tgz#2d52eb80e4e7c4ea8812c89181d6d590b53f958c"
+  integrity sha512-9AEqNZZyBx8OdZpxzQlaFEVCSFUM2YXJH46yPOiOpm078k6ZLOCcuAzGum/zK8YBwY+dbahVNbHrbgrAwIRlqw==
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
