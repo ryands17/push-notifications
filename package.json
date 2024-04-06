@@ -5,9 +5,9 @@
   "private": true,
   "dependencies": {
     "@types/jest": "29.5.12",
-    "@types/node": "20.12.2",
-    "@types/react": "18.2.73",
-    "@types/react-dom": "18.2.23",
+    "@types/node": "20.12.5",
+    "@types/react": "18.2.74",
+    "@types/react-dom": "18.2.24",
     "firebase": "8.10.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
