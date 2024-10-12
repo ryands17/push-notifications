@@ -8153,10 +8153,10 @@ js-yaml@^4.1.0:
   dependencies:
     argparse "^2.0.1"
 
-jscodeshift@0.16.1:
-  version "0.16.1"
-  resolved "https://registry.yarnpkg.com/jscodeshift/-/jscodeshift-0.16.1.tgz#f80207f0a99b58de400a6f174ceecefe277dd5da"
-  integrity sha512-oMQXySazy63awNBzMpXbbVv73u3irdxTeX2L5ueRyFRxi32qb9uzdZdOY5fTBYADBG19l5M/wnGknZSV1dzCdA==
+jscodeshift@17.0.0:
+  version "17.0.0"
+  resolved "https://registry.yarnpkg.com/jscodeshift/-/jscodeshift-17.0.0.tgz#a5a255b87cf9aab226133ddc02471e2ff7a88bd9"
+  integrity sha512-Af+MFsNwLSVO+t4kKjJdJKh6iNbNHfDfFGdyltJ2wUFN3furgbvHguJmB85iou+fY7wbHgI8eiEKpp6doGgtKg==
   dependencies:
     "@babel/core" "^7.24.7"
     "@babel/parser" "^7.24.7"
@@ -8168,12 +8168,11 @@ jscodeshift@0.16.1:
     "@babel/preset-flow" "^7.24.7"
     "@babel/preset-typescript" "^7.24.7"
     "@babel/register" "^7.24.6"
-    chalk "^4.1.2"
     flow-parser "0.*"
     graceful-fs "^4.2.4"
     micromatch "^4.0.7"
     neo-async "^2.5.0"
-    node-dir "^0.1.17"
+    picocolors "^1.0.1"
     recast "^0.23.9"
     temp "^0.9.4"
     write-file-atomic "^5.0.1"
@@ -8766,7 +8765,7 @@ minimalistic-assert@^1.0.0:
   resolved "https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz#2e194de044626d4a10e7f7fbc00ce73e83e4d5c7"
   integrity sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==
 
-minimatch@3.0.4, minimatch@^3.0.2, minimatch@^3.0.4:
+minimatch@3.0.4, minimatch@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
@@ -8958,13 +8957,6 @@ no-case@^3.0.4:
   dependencies:
     lower-case "^2.0.2"
     tslib "^2.0.3"
-
-node-dir@^0.1.17:
-  version "0.1.17"
-  resolved "https://registry.yarnpkg.com/node-dir/-/node-dir-0.1.17.tgz#5f5665d93351335caabef8f1c554516cf5f1e4e5"
-  integrity sha1-X1Zl2TNRM1yqvvjxxVRRbPXx5OU=
-  dependencies:
-    minimatch "^3.0.2"
 
 node-fetch@2.6.7:
   version "2.6.7"
