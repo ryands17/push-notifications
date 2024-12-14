@@ -8,7 +8,7 @@
     "@types/node": "22.10.2",
     "@types/react": "19.0.1",
     "@types/react-dom": "19.0.2",
-    "firebase": "8.10.1",
+    "firebase": "11.1.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-scripts": "5.0.1",
