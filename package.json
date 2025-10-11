@@ -4,7 +4,7 @@
   "description": "A simple implementation of FCM Push notifications",
   "private": true,
   "dependencies": {
-    "@types/jest": "29.5.14",
+    "@types/jest": "30.0.0",
     "@types/node": "22.18.9",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.1",
